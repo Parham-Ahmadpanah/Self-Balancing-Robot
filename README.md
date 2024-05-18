@@ -1,6 +1,6 @@
 ## Project Introduction:
 The Self Balancing Robot is a two-wheeled robot capable of maintaining balance vertically on its two wheels and preventing falls. The control mechanism implemented in this robot provides resistance against impacts and external forces, enabling it to move on uneven and sloped surfaces.
-![Project_Introduction](Data\Self Balancing Robot.gif)
+![Video](Data\Self Balancing Robot.gif)
 To achieve balance, the robot’s center of mass and the center of its wheels must align along a hypothetical vertical line. In this project, the deviation of the robot from the vertical position is detected and calculated using an ultrasonic sensor. To compensate for this deviation, the wheels must rotate in the direction of the robot’s fall, and proportional, derivative, and integral control coefficients (PID controller) are experimentally determined to balance the robot based on its behavior in different control coefficients.
 ## Objective:
 The mechanical behavior of a balancing robot is akin to an inverted pendulum on a moving cart, exhibiting inherent instability due to its nonlinearity. This project serves as a suitable platform for researching control algorithms and examining the effects of each controller coefficient. Additionally, two-wheeled robots, due to their physical characteristics, offer other advantages:
@@ -30,7 +30,7 @@ The sensor has four wires, one of which is 5V internal, the other is ground, and
 ## Control System of the Project:
 To examine the control system of this robot and design a controller for it, we first need to derive the dynamic equations of the system and mathematically model it.
 The system can be divided into two parts: the main body and the rotational system on which the body is implemented. The rotational system includes the wheels, motors, driver, and gearbox. After obtaining the dynamic equations of the system, the physical parameters of the robot are incorporated into them. Based on the sources the final TF will be:
-![](Data/Pic3.JPG)
+![](Data/Pic2.JPG)
 
 I used PID controller for controlling the system. So, I found the initial parameters based on Ziegler-Nichols tuning rule:
 ![](Data/Pic3.JPG)
