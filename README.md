@@ -1,6 +1,12 @@
 ## Project Introduction:
 The Self Balancing Robot is a two-wheeled robot capable of maintaining balance vertically on its two wheels and preventing falls. The control mechanism implemented in this robot provides resistance against impacts and external forces, enabling it to move on uneven and sloped surfaces.
-![Video](Data\SelfBalancingRobot.gif)
+
+![Self-Balancing Robot](Data/SelfBalancingRobot.gif)
+<video width="320" height="240" controls>
+  <source src="Data/SelfBalancingRobot.gif" type="video/gif">
+  Your browser does not support the video tag.
+</video>
+
 To achieve balance, the robot’s center of mass and the center of its wheels must align along a hypothetical vertical line. In this project, the deviation of the robot from the vertical position is detected and calculated using an ultrasonic sensor. To compensate for this deviation, the wheels must rotate in the direction of the robot’s fall, and proportional, derivative, and integral control coefficients (PID controller) are experimentally determined to balance the robot based on its behavior in different control coefficients.
 ## Objective:
 The mechanical behavior of a balancing robot is akin to an inverted pendulum on a moving cart, exhibiting inherent instability due to its nonlinearity. This project serves as a suitable platform for researching control algorithms and examining the effects of each controller coefficient. Additionally, two-wheeled robots, due to their physical characteristics, offer other advantages:
