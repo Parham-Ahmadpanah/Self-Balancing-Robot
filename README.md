@@ -1,6 +1,6 @@
 ## Project Introduction:
 The Self Balancing Robot is a two-wheeled robot capable of maintaining balance vertically on its two wheels and preventing falls. The control mechanism implemented in this robot provides resistance against impacts and external forces, enabling it to move on uneven and sloped surfaces.
-![Video](Data\Self Balancing Robot.gif)
+![Video](Self Balancing Robot.mp4)
 To achieve balance, the robot’s center of mass and the center of its wheels must align along a hypothetical vertical line. In this project, the deviation of the robot from the vertical position is detected and calculated using an ultrasonic sensor. To compensate for this deviation, the wheels must rotate in the direction of the robot’s fall, and proportional, derivative, and integral control coefficients (PID controller) are experimentally determined to balance the robot based on its behavior in different control coefficients.
 ## Objective:
 The mechanical behavior of a balancing robot is akin to an inverted pendulum on a moving cart, exhibiting inherent instability due to its nonlinearity. This project serves as a suitable platform for researching control algorithms and examining the effects of each controller coefficient. Additionally, two-wheeled robots, due to their physical characteristics, offer other advantages:
@@ -34,3 +34,18 @@ The system can be divided into two parts: the main body and the rotational syste
 
 I used PID controller for controlling the system. So, I found the initial parameters based on Ziegler-Nichols tuning rule:
 ![](Data/Pic3.JPG)
+
+After increasing the Kp, I created an oscillation, then by giving an integral term, it can reach to an stability with overshoot but it still need long time reaching to steady state. Then by increasing the Derivative part, the overshoot decreases and it will be stable faster than PI controller. Tuning the system for the best parameters needs effort but finally gives you a pleasant result.
+
+## Conclusion:
+Setting the PID parameters in maintaining the balance of the robot plays a crucial role. These values can be defined according to the Ziegler-Nichols table, but due to simplifications that take place, they differ with empirical values. Based on all the obtained diagrams, the effect of each PID coefficient is as follows:
+
+KpK_pKp​ is proportional to the system’s response speed, and increasing it makes the system respond quickly to any error.
+KiK_iKi​, by looking at the past and summing up the errors that have occurred in the system, reduces the range of oscillations. However, increasing the value of this coefficient beyond a certain point leads to system instability due to very small oscillations, causing the system to move towards its inherent nature in a static state, which is inherently unstable.
+KdK_dKd​, by looking into the future and the slope of the system at each moment, reduces overshoot and also increases resistance if the system experiences disturbance and impact.
+
+## References 
+References:
+- [1] F. R. Jiménez L., I. A. Ruge R., and A. F. Jiménez L., "Modeling and Control of a Two Wheeled AutoBalancing Robot: a didactic platform for control engineering education," Pedagogical and Technological University of Colombia - Department of Electronic Engineering - I2E Research Group.
+- [2] P. Frankovský, L. Dominik, A. Gmiterko, I. Virgala, P. Kurylo, O. Perminova, "Modeling of Two-Wheeled Self-Balancing Robot Driven by DC Gearmotors," International Journal of Applied Mechanics and Engineering.
+- [3] K. Ogata, "Modern Control Engineering," Pearson, 5th edition.
