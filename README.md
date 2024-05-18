@@ -45,7 +45,6 @@ KiK_iKi​, by looking at the past and summing up the errors that have occurred 
 KdK_dKd​, by looking into the future and the slope of the system at each moment, reduces overshoot and also increases resistance if the system experiences disturbance and impact.
 
 ## References 
-References:
 - [1] F. R. Jiménez L., I. A. Ruge R., and A. F. Jiménez L., "Modeling and Control of a Two Wheeled AutoBalancing Robot: a didactic platform for control engineering education," Pedagogical and Technological University of Colombia - Department of Electronic Engineering - I2E Research Group.
 - [2] P. Frankovský, L. Dominik, A. Gmiterko, I. Virgala, P. Kurylo, O. Perminova, "Modeling of Two-Wheeled Self-Balancing Robot Driven by DC Gearmotors," International Journal of Applied Mechanics and Engineering.
 - [3] K. Ogata, "Modern Control Engineering," Pearson, 5th edition.
